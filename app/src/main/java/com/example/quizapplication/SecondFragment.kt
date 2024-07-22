@@ -13,7 +13,7 @@ import com.example.quizapplication.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
     private var _binding: FragmentSecondBinding? = null
-    val binding get() = _binding!!
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

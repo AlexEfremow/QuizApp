@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -30,8 +31,6 @@ class ResultFragment : Fragment() {
         val args = arguments?.getInt("number")
         val animationFadeIn = AnimationUtils.loadAnimation(requireContext(), R.anim.faid_in_anim)
         binding.resultNumber.startAnimation(animationFadeIn)
-        if(args == 6) {
-        }
         when(args) {
             6 -> {binding.image.setImageResource(R.drawable.free_icon_education_6012710)
                 binding.resultTextview2.text = "You're the genius!"}
@@ -39,9 +38,12 @@ class ResultFragment : Fragment() {
                 binding.image.setImageResource(R.drawable.free_icon_error_1375138)
                 binding.resultTextview2.text = "Try again!"
             }
-            else -> {
+            in 3 .. 6 -> {
                 binding.image.setImageResource(R.drawable.free_icon_book_6915042)
                 binding.resultTextview2.text = "Good job!"
+            }
+            else -> {
+                Toast.makeText(requireContext(), "Nullable exception...", Toast.LENGTH_LONG).show()
             }
         }
         binding.resultNumber.text = args.toString()
@@ -52,7 +54,7 @@ class ResultFragment : Fragment() {
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             Navigation.findNavController(view)
-                .navigate(R.id.action_resultFragment_to_secondFragment)
+                .navigate(R.id.action_resultFragment_to_firstFragment)
         }
     }
 
