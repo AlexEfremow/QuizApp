@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.quizapplication.databinding.FragmentSecondBinding
@@ -26,6 +28,8 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         questionsInfo()
+        val animationFadeIn = AnimationUtils.loadAnimation(requireContext(), R.anim.faid_in_anim)
+        viewAnimations(animationFadeIn)
 
         binding.backButton.setOnClickListener {
             onBackPressed()
@@ -50,7 +54,7 @@ class SecondFragment : Fragment() {
         _binding = null
     }
 
-    fun onBackPressed() {
+    private fun onBackPressed() {
         findNavController().popBackStack()
     }
 
@@ -66,8 +70,19 @@ class SecondFragment : Fragment() {
 
         return correctAnswersCount
     }
+    private fun viewAnimations(anim: Animation) {
+        binding.firstQuestion.textView2.startAnimation(anim)
+        binding.secondQuestion.textView2.startAnimation(anim)
+        binding.thirdQuestion.textView2.startAnimation(anim)
+        binding.fourthQuestion.textView2.startAnimation(anim)
+        binding.fifthQuestion.textView2.startAnimation(anim)
+        binding.sixthQuestion.textView2.startAnimation(anim)
+        binding.sendButton.startAnimation(anim)
+        binding.backButton.startAnimation(anim)
+    }
 
-    fun questionsInfo() {
+    private fun questionsInfo() {
+
         binding.firstQuestion.textView2.text = getString(R.string.first_question_text)
         binding.firstQuestion.answer1.text = getString(R.string.first_question_answer_1)
         binding.firstQuestion.answer2.text = getString(R.string.first_question_answer_2)

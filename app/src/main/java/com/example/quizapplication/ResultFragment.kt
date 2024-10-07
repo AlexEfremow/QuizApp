@@ -33,7 +33,7 @@ class ResultFragment : Fragment() {
         binding.resultNumber.startAnimation(animationFadeIn)
         when(args) {
             6 -> {binding.image.setImageResource(R.drawable.free_icon_education_6012710)
-                binding.resultTextview2.text = "You're the genius!"}
+                binding.resultTextview2.text = "You're genius!"}
             in 0 .. 2 -> {
                 binding.image.setImageResource(R.drawable.free_icon_error_1375138)
                 binding.resultTextview2.text = "Try again!"

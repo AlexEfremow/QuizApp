@@ -13,7 +13,7 @@
         android:backgroundTint="#e37b52"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view_2"
@@ -26,13 +26,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/welcome_picture"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintLeft_toRightOf="@id/view_1"
-        app:layout_constraintRight_toLeftOf="@id/view_2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/view_2"
+        app:layout_constraintStart_toEndOf="@id/view_1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -45,9 +47,9 @@
         android:textColor="#4f332a"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/continue_button"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -55,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/ripple_animation"
         android:backgroundTint="#cf6e4d"
         android:text="Start the quiz"
         android:textColor="@color/white"
