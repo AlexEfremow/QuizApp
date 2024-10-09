@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">QuizApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_question_text">Which of these targets does Kotlin currently not support?</string>
+    <string name="first_question_answer_1">JVM</string>
+    <string name="first_question_answer_2">LLVM</string>
+    <string name="first_question_answer_3">.NET CLR</string>
+    <string name="second_question_text">Under which license is Kotlin available?</string>
+    <string name="second_question_answer_1">Apache 2</string>
+    <string name="second_question_answer_2">GPL</string>
+    <string name="second_question_answer_3">MIT</string>
+    <string name="third_question_text">Who developed the Kotlin programming language?</string>
+    <string name="third_question_answer_1">Google</string>
+    <string name="third_question_answer_2">JetBrains</string>
+    <string name="third_question_answer_3">Microsoft</string>
+    <string name="fourth_question_text">What is Kotlin primarily designed for?</string>
+    <string name="fourth_question_answer_1">Webs</string>
+    <string name="fourth_question_answer_2">Games</string>
+    <string name="fourth_question_answer_3">Mobile apps</string>
+    <string name="fifth_question_text">What keyword is used to declare a\n variable as nullable in Kotlin?</string>
+    <string name="fifth_question_answer_1">null</string>
+    <string name="fifth_question_answer_2">\?</string>
+    <string name="fifth_question_answer_3">nullable</string>
+    <string name="sixth_question_text">What is the default visibility modifier for \ntop-level declarations in Kotlin?</string>
+    <string name="sixth_question_answer_1">public</string>
+    <string name="sixth_question_answer_2">private</string>
+    <string name="sixth_question_answer_3">protected</string>
+    <string name="try_again">Try again</string>
+    <string name="your_result">Your result:</string>
 </resources>
