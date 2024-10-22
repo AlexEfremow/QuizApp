@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/first_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/second_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/third_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/fourth_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/fifth_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <include
+                android:id="@+id/sixth_question"
+                layout="@layout/question_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="#e37b52" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_button"
+                style="@style/button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/opensans_bold"
+                android:text="SEND RESULT"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                style="@style/button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/opensans_bold"
+                android:text="BACK"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

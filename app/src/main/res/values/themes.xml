@@ -5,5 +5,25 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.QuizApplication" parent="Base.Theme.QuizApplication" />
+    <style name="Theme.QuizApplication" parent="Base.Theme.QuizApplication">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+        <item name="android:colorPrimaryDark">#800000</item>
+        <item name="android:colorPrimary">#A52A2A</item>
+        <item name="android:background">#F1BFAC</item>
+    </style>
+
+    <style name="bold_text_style">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+    </style>
+
+    <style name="regular_text_style">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:backgroundTint">#A52A2A</item>
+        <item name="android:fontFamily">@font/opensans_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
